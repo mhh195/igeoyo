@@ -86,7 +86,7 @@
 				<td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
 			</tr>
 			<tr align="center">
-				<td><button type="button">9</button></td> <td></td> <td></td> <td></td> <td><button type="button">00</button></td> <td></td> <td></td> <td></td> <td><button type="button">3</button></td>
+				<td><button type="button">9</button></td> <td></td> <td></td> <td></td> <td><button type="button">000</button></td> <td></td> <td></td> <td></td> <td><button type="button">3</button></td>
 			</tr>
 			<tr align="center">
 				<td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
