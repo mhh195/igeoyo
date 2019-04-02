@@ -1,7 +1,8 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<%@ page session="false" %>
+<%@ page session="false"  %>
 <html>
 <head>
+
 	<meta charset="utf-8">
 	  <meta name="viewport" content="width=device-width, initial-scale=1">
 <!-- 	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css"> -->
@@ -40,6 +41,7 @@
   			color: black;
   			background-color: #FFFFFF;
   			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  			font-size: 10pt;
 		}
 		button:hover {
 		  background-color: #4CAF50;
@@ -74,10 +76,22 @@
 	</nav>
 		<table>
 			<tr align="center">
-				<td></td> <td></td> <td></td> <td></td> <td><button type="button">12</button></td> <td></td> <td></td> <td></td> <td></td>
+				<td></td> <td></td> <td></td> <td></td>
+				<td>
+					<button type="button">1</button>
+				</td>
+				<td></td> <td></td> <td></td> <td></td>
 			</tr>
 			<tr align="center">
-				<td></td> <td><button type="button">10.5</button></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td><button type="button">1.5</button></td> <td></td>
+				<td></td>
+				<td>
+					<button type="button">8</button>
+				</td>
+				<td></td> <td></td> <td></td> <td></td> <td></td>
+				<td>
+					<button type="button">2</button>
+				</td>
+				<td></td>
 			</tr>
 			<tr align="center">
 				<td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
@@ -86,7 +100,17 @@
 				<td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
 			</tr>
 			<tr align="center">
-				<td><button type="button">9</button></td> <td></td> <td></td> <td></td> <td><button type="button">000</button></td> <td></td> <td></td> <td></td> <td><button type="button">3</button></td>
+				<td>
+					<button type="button">7</button>
+				</td>
+				<td></td> <td></td> <td></td>
+				<td>
+					<button type="button">0</button>
+				</td>
+				<td></td> <td></td> <td></td>
+				<td>
+					<button type="button">3</button>
+				</td>
 			</tr>
 			<tr align="center">
 				<td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
@@ -95,10 +119,21 @@
 				<td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td>
 			</tr>
 			<tr align="center">
-				<td></td> <td><button type="button">7.5</button></td> <td></td> <td></td> <td></td> <td></td> <td></td> <td><button type="button">4.5</button></td> <td></td>
+				<td></td>
+				<td>
+					<button type="button">6</button>
+				</td>
+				<td></td> <td></td> <td></td> <td></td> <td></td>
+				<td>
+					<button type="button">4</button>
+				</td>
+				<td></td>
 			</tr>
 			<tr align="center">
-				<td></td> <td></td> <td></td> <td></td> <td><button type="button">6</button></td> <td></td> <td></td> <td></td> <td></td>
+				<td></td> <td></td> <td></td> <td></td>
+				<td>
+					<button type="button">5</button>
+				</td> <td></td> <td></td> <td></td> <td></td>
 			</tr>
 	      </table>
     </div>
