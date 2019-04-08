@@ -4,5 +4,27 @@
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- Root Context: defines shared resources visible to all other web components -->
-		
+	
+    <bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+<!--         <property name="locations" value="classpath:/jdbc.properties" /> -->
+        <property name="fileEncoding" value="UTF-8" />
+    </bean>
+    
+     <bean id="SqlSession" class="org.mybatis.spring.SqlSessionFactoryBean">
+        <property name="dataSource" ref="dataSource" />
+        <property name="mapperLocations" value="classpath:/mapper/**/*-mapper.xml" />
+    </bean>
+     
+    <bean id="SqlSessionTemplate" class="org.mybatis.spring.SqlSessionTemplate">
+        <constructor-arg index="0" ref="SqlSession"/>
+    </bean>  
+    
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource">
+        <property name="driverClassName" value="org.postgresql.Driver"/>
+        <property name="url" value="jdbc:postgresql://localhost:5432/igeoyo" />
+        <property name="username" value="postgres"/>
+        <property name="password" value="postgres"/>    
+    </bean>
+    <!-- JDBC-PostgreSQL -->
+    
 </beans>

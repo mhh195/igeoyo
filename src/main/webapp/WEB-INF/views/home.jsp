@@ -1,3 +1,4 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page session="false"  %>
 <html>
@@ -12,7 +13,22 @@
 		<link href="<c:url value="/resources/css/bootstrap.min.css" />" rel="stylesheet">
 	  <script src="<c:url value="/resources/js/jquery.min.js" />"></script>
 	  <script src="<c:url value="/resources/js/bootstrap.min.js" />"></script>
-	<style>
+	  
+	  <script type="text/javascript">
+        $(document).ready(function () {
+            $("button[name=ok]").click(function () {
+                $("form[name=groupMemberInfo]")
+                .attr({ action: "groupMemberManage.php?value="+$(this).val(), method: "post" })
+                .submit();
+            });
+        });
+	</script>
+	
+	<style>		
+		.navbar navbar-inverse{
+  			background-color: #0076B5;
+		
+		}
 		.bg-image {
 		  background-image: url("resources/bg1.png"); /* The image used */
 		  height: 100%; /* You must set a specified height */
@@ -37,48 +53,79 @@
 			width:50px;
 			height:50px;
 			border-radius: 100%;
-  			border: 2px solid #4CAF50;
+  			border: 2px solid #90B324;
   			color: black;
   			background-color: #FFFFFF;
   			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
   			font-size: 10pt;
 		}
 		button:hover {
-		  background-color: #4CAF50;
+		  background-color: #90B324;
 		  color: white;
 		}
+		input{
+			width:50px;
+			height:50px;
+			border-radius: 100%;
+  			border: 2px solid #90B324;
+  			color: black;
+  			background-color: #FFFFFF;
+  			box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  			font-size: 10pt;
+  			text-align: center;
+		}
+		input:hover {
+		  background-color: #90B324;
+		  color: white;
+		}
+		
+		
+		
+		ul {
+	  list-style-type: none;
+	  margin: 0;
+	  padding: 0;
+	  overflow: hidden;
+	  background-color: #0076B5;
+	}
+	
+	li {
+	  float: left;
+	}
+	
+	li a {
+	  display: block;
+	  color: white;
+	  text-align: center;
+	  padding: 14px 16px;
+	  text-decoration: none;
+	}
+	
+	li a:hover {
+	  background-color: #008ad5;
+	  color: white;
+	  text-decoration:none;
+	}
 	</style>
 
 <body>
+
+
+
 	<div class="bg-image">
-		<nav class="navbar navbar-inverse">
-	  <div class="container-fluid">
-	    <div class="navbar-header">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>                        
-	      </button>
-	      <a class="navbar-brand" href="#">Logo</a>
-	    </div>
-	    <div class="collapse navbar-collapse" id="myNavbar">
-	      <ul class="nav navbar-nav">
-	        <li class="active"><a href="#">Home</a></li>
-	        <li><a href="#">About</a></li>
-	        <li><a href="#">Projects</a></li>
-	        <li><a href="#">Contact</a></li>
-	      </ul>
-	      <ul class="nav navbar-nav navbar-right">
-	        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
-	      </ul>
-	    </div>
-	  </div>
-	</nav>
+			<ul>
+		  <li><a class="active" href="home">Home</a></li>
+		  <li><a href="#news">News</a></li>
+		  <li><a href="#contact">Contact</a></li>
+		  <li><a href="#about">About</a></li>
+		</ul>
 		<table>
 			<tr align="center">
 				<td></td> <td></td> <td></td> <td></td>
 				<td>
-					<button type="button">1</button>
+					<form action="map.do"> 
+						<input type=submit name="cate" value="한식">
+					</form>
 				</td>
 				<td></td> <td></td> <td></td> <td></td>
 			</tr>
@@ -89,7 +136,9 @@
 				</td>
 				<td></td> <td></td> <td></td> <td></td> <td></td>
 				<td>
-					<button type="button">2</button>
+					<form action="map.do"> 
+						<input type=submit name="cate" value="베트남식">
+					</form>
 				</td>
 				<td></td>
 			</tr>
@@ -105,11 +154,15 @@
 				</td>
 				<td></td> <td></td> <td></td>
 				<td>
-					<button type="button">0</button>
+					<form action="map.do"> 
+						<input type=submit name="cate" value="랜덤">
+					</form>
 				</td>
 				<td></td> <td></td> <td></td>
 				<td>
-					<button type="button">3</button>
+					<form action="map.do"> 
+						<input type=submit name="cate" value="중식">
+					</form>
 				</td>
 			</tr>
 			<tr align="center">
@@ -125,14 +178,18 @@
 				</td>
 				<td></td> <td></td> <td></td> <td></td> <td></td>
 				<td>
-					<button type="button">4</button>
+					<form action="map.do"> 
+						<input type=submit name="cate" value="양식">
+					</form>
 				</td>
 				<td></td>
 			</tr>
 			<tr align="center">
 				<td></td> <td></td> <td></td> <td></td>
 				<td>
-					<button type="button">5</button>
+					<form action="map.do"> 
+						<input type=submit name="cate" value="간편식">
+					</form>
 				</td> <td></td> <td></td> <td></td> <td></td>
 			</tr>
 	      </table>
