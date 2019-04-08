@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="igeoyo">
+	
+<!-- 	<select id="selectCate" parameterType="java.lang.String" resultType="com.igeoyo.vo.CateVO" > -->
+	<select id="selectCate" parameterType="java.lang.String" resultType="com.igeoyo.vo.CateVO" >
+		SELECT RESTAURANT_NAME
+		FROM RESTAURANT_INFO
+		WHERE CATEGORY = #{category}
+	</select>
+	
+</mapper>
